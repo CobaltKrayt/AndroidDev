@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">AboutMe</string>
+    <string name="name">George</string>
+    <string name="yellow_star">Yellow star</string>
+
+    <string name="bio">Android 10 provides Force Dark, a feature for developers to quickly implement a Dark theme without explicitly setting a DayNight theme, as described above.
+\n\nForce Dark analyzes each view of your light-themed app, and applies a dark theme automatically before it is drawn to the screen. Some developers use a mix of Force Dark and native implementation to cut down on the amount of time needed to implement Dark theme.
+\n\nApps must opt-in to Force Dark by setting android:forceDarkAllowed="true" in the activity\'s theme. This attribute is set on all of the system and AndroidX provided light themes, such as Theme.Material.Light. When you use Force Dark, you should make sure to test your app thoroughly and exclude views as needed.
+\n\nIf your app uses a dark theme (such as Theme.Material), Force Dark will not be applied. Similarly, if your app\'s theme inherits from a DayNight theme, Force Dark will not be applied, due to the automatic theme switching.\n\n</string>
+    <string name="bio_top_image">Bio top image</string>
+    <string name="what_is_your_nickname">What\'s your Nickname?</string>
+    <string name="done">Done</string>
+</resources>
