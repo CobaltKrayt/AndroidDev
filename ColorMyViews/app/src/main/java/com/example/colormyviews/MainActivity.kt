@@ -15,7 +15,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun setListeners(){
         val clickableViews: List<View> =
-                listOf(findViewById(R.id.box_one_text),findViewById(R.id.box_two_text),findViewById(R.id.box_three_text),findViewById(R.id.box_four_text),findViewById(R.id.box_five_text))
+                listOf(findViewById(R.id.box_one_text),findViewById(R.id.box_two_text),findViewById(R.id.box_three_text),
+                        findViewById(R.id.box_four_text),findViewById(R.id.box_five_text),
+                        findViewById(R.id.red_button),findViewById(R.id.yellow_button),findViewById(R.id.green_button))
 
         for (item in clickableViews){
             item.setOnClickListener{makeColored(it)}
@@ -24,6 +26,10 @@ class MainActivity : AppCompatActivity() {
 
 
     private  fun makeColored(view: View) {
+
+        var b3t: View = findViewById(R.id.box_three_text)
+        var b4t: View = findViewById(R.id.box_four_text)
+        var b5t: View = findViewById(R.id.box_five_text)
         when (view.id) {
 
             // Boxes using Color class colors for background
@@ -34,6 +40,12 @@ class MainActivity : AppCompatActivity() {
             R.id.box_three_text -> view.setBackgroundResource(android.R.color.holo_green_light)
             R.id.box_four_text -> view.setBackgroundResource(android.R.color.holo_green_dark)
             R.id.box_five_text -> view.setBackgroundResource(android.R.color.holo_green_light)
+
+            // Boxes using custom colors for background
+            R.id.red_button -> b3t.setBackgroundResource(R.color.my_red)
+            R.id.yellow_button -> b4t.setBackgroundResource(R.color.my_yellow)
+            R.id.green_button -> b5t.setBackgroundResource(R.color.my_green)
+
 
             else -> view.setBackgroundColor(Color.LTGRAY)
         }
